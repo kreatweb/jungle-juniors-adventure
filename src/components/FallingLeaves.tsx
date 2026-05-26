@@ -1,11 +1,11 @@
-const LEAVES = ["🍃", "🍂", "🌿", "🍃", "🍂"];
+const LEAVES = ["🍃", "🌿", "🍃", "🌱", "🍃", "🦋", "🌿", "🍂"];
 
 export function FallingLeaves() {
-  const leaves = Array.from({ length: 14 }, (_, i) => {
-    const left = (i * 7.3) % 100;
-    const duration = 12 + ((i * 3) % 10);
-    const delay = (i * 1.7) % 14;
-    const size = 1.2 + ((i * 0.3) % 1.4);
+  const leaves = Array.from({ length: 28 }, (_, i) => {
+    const left = (i * 4.7) % 100;
+    const duration = 9 + ((i * 2.3) % 12);
+    const delay = (i * 0.9) % 14;
+    const size = 1.1 + ((i * 0.4) % 1.6);
     const emoji = LEAVES[i % LEAVES.length];
     return (
       <span
