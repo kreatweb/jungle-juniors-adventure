@@ -164,13 +164,14 @@ function WhatSection() {
   );
 }
 
-const ACTIVITIES = [
+type Activity = { icon: string; title: string; desc: string; href?: string };
+const ACTIVITIES: Activity[] = [
   { icon: "🏕️", title: "Wild Camping", desc: "Sleep under starlit skies." },
   { icon: "🧗", title: "Rock Climbing", desc: "Scale boulders, conquer fears." },
   { icon: "🏹", title: "Archery", desc: "Aim true, breathe deep." },
   { icon: "🌊", title: "River Rafting", desc: "Ride the rushing rapids." },
   { icon: "🔥", title: "Campfire Tales", desc: "Stories, songs, sticky marshmallows." },
-  { icon: "🧭", title: "Trail Quests", desc: "Map, compass, untamed paths." },
+  { icon: "📜", title: "Read Full Itinerary", desc: "Every wild day, mapped out.", href: "/itinerary.pdf" },
 ];
 
 function ActivitiesSection() {

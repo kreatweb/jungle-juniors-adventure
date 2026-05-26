@@ -107,10 +107,10 @@
 
 @layer utilities {
   .glass {
-    background: oklch(0.22 0.05 150 / 0.45);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    border: 1px solid oklch(0.96 0.02 90 / 0.1);
+    background: oklch(0.98 0.01 200 / 0.12);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid oklch(0.98 0.01 200 / 0.22);
   }
   .text-gradient-ember {
     background: var(--gradient-ember);
@@ -141,22 +141,24 @@
   will-change: transform;
   animation: leaf-fall linear infinite;
   z-index: 1;
-  filter: drop-shadow(0 2px 4px oklch(0 0 0 / 0.4));
+  filter: drop-shadow(0 2px 6px oklch(0.3 0.05 200 / 0.35));
 }
 
-/* Fireflies */
+/* Fireflies — cooler cyan glow */
 @keyframes firefly-drift {
-  0%, 100% { transform: translate(0,0); opacity: 0.2; }
-  25% { transform: translate(30px, -20px); opacity: 1; }
+  0%, 100% { transform: translate(0,0) scale(1); opacity: 0.3; }
+  25% { transform: translate(40px, -30px) scale(1.2); opacity: 1; }
   50% { transform: translate(-15px, -40px); opacity: 0.6; }
   75% { transform: translate(20px, 10px); opacity: 1; }
 }
 .firefly {
   position: absolute;
-  width: 6px; height: 6px;
+  width: 7px; height: 7px;
   border-radius: 50%;
-  background: oklch(0.92 0.18 90);
-  box-shadow: 0 0 12px 3px oklch(0.85 0.18 85 / 0.9), 0 0 24px 8px oklch(0.78 0.15 80 / 0.4);
+  background: oklch(0.96 0.12 200);
+  box-shadow:
+    0 0 14px 4px oklch(0.9 0.15 195 / 0.95),
+    0 0 30px 12px oklch(0.78 0.18 200 / 0.5);
   animation: firefly-drift ease-in-out infinite;
   pointer-events: none;
 }
