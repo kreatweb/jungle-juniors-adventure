@@ -6,6 +6,7 @@ import { tanstackStart } from "@tanstack/react-start/plugin/vite";
 import { cloudflare } from "@cloudflare/vite-plugin";
 
 export default defineConfig(({ command }) => ({
+  base: '/jungle-juniors-adventure/',
   plugins: [
     tsconfigPaths(),
     tailwindcss(),
