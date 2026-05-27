@@ -11,7 +11,7 @@ const queryClient = new QueryClient();
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <QueryClientProvider client={queryClient}>
-      <HashRouter basename={import.meta.env.BASE_URL}>
+      <HashRouter >
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="*" element={<NotFound />} />
